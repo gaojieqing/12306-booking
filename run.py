@@ -8,6 +8,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait, Select
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def book():
@@ -130,7 +131,8 @@ if __name__ == '__main__':
     options = ChromeOptions()
     # 调试已经存在的Chrome浏览器，否则会新建一个浏览器，导致登录失效
     options.debugger_address = '127.0.0.1:19222'
-    driver = Chrome(options=options, service=service)
+    # driver = Chrome(options=options, service=service)
+    driver = Chrome(options=options, service=Service(ChromeDriverManager().install()))
 
     while True:
         if book():
