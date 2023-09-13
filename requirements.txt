@@ -1,2 +1,4 @@
 selenium==4.11.2
 python-dotenv
+wrapcache
+requests
