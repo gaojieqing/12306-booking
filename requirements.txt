@@ -1,4 +1,5 @@
 selenium==4.11.2
+webdriver_manager
 python-dotenv
 wrapcache
 requests
